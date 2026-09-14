@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+header {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas:
+        "logo search login"
+        "logo options login";
+    gap: 15px 25px;
+    padding: 25px 40px;
+    background: #b0dfe5;
+}
+.logo {
+    grid-area: logo;
+}
+.login {
+    grid-area: login;
+}
+.logo, .login {
+    width: 100px;
+    height: 50px;
+    align-self: start;
+    background: #3cb371;
+}
+.search {
+    grid-area: search;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    height: 50px;
+}
+.search_input {
+    border: none;
+    outline: none;
+    padding: 0 15px;
+    font-size: 14px;
+}
+.search_button {
+    border: none;
+    padding: 0 15px;
+    background: #dc7092;
+    font-size: 14px;
+    cursor: pointer;
+}
+.options {
+    grid-area: options;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+.options_button {
+    height: 35px;
+    border: none;
+    background: #4682b4;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+}
